@@ -1,24 +1,54 @@
+/* Global Styles */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f9e3e3;
+    background-color: #dff0d8; /* Light green background for celebration */
     font-family: 'Arial', sans-serif;
-}
-
-.container {
     text-align: center;
 }
 
-.header_text {
-    font-size: 3em;
-    color: #d32f2f;
+/* Container Styling */
+.container {
+    max-width: 600px; /* Container width for larger screens */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Header Text Styling */
+.header_text {
+    font-size: 3rem; /* Font size for heading */
+    color: #4caf50; /* Green color for success */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* GIF Container Styling */
 .gif_container img {
     width: 100%; 
     max-width: 500px; 
-    height: auto; 
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.gif_container img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header_text {
+        font-size: 2.5rem; /* Smaller header text on mobile */
+    }
+
+    .container {
+        padding: 15px; /* Reduced padding on smaller screens */
+    }
 }
